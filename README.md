@@ -2,7 +2,7 @@
 
 <h1 align="center"> Desafio Prático NGO </h1>
 
-![issues](https://img.shields.io/github/issues/caroolt/NGODesafioPratico?color=red) ![license](https://img.shields.io/github/license/caroolt/NGODesafioPratico)
+![issues](https://img.shields.io/github/issues/caroolt/desafiopraticoNGO?color=red) ![license](https://img.shields.io/github/license/caroolt/desafiopraticoNGO)
 
 ![Banner de pessoas votando](https://user-images.githubusercontent.com/82682093/156283363-a3c602e7-b249-4b8e-ad9f-bf3928ec5378.png)
 
