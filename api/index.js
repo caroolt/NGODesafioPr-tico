@@ -2,7 +2,6 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const config = require('config')
-
 app.use(bodyParser.json());
 
 app.use((request, response, middlewareContent) => {
@@ -31,7 +30,7 @@ const EmptyField = require('./errors/EmptyField');
 const ContentTypeNotSupported = require('./errors/ContentTypeNotSupported');
 const { acceptedFormats, ErrorsSerializer } = require('./Serializer');
 
-app.use('/api/candidates', router);
+app.use('/survey', router);
 
 app.use((erro, request, response, middlewareErros) => {
     let status = 500;

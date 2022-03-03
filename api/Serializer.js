@@ -63,6 +63,7 @@ class CandidateSerializer extends Serializer {
         this.publicFields = [
             'id',
             'name',
+            'votes',
             'message'
         ].concat(extraFields || [])
         this.tagSingular = 'Candidate';

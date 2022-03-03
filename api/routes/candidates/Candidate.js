@@ -25,14 +25,18 @@ class Candidate {
   }
 
   async load() {
-    const foundSupplier = await candidateTable.getById(this.id)
-    this.name = foundSupplier.name
-    this.createdAt = foundSupplier.createdAt
-    this.updatedAt = foundSupplier.updatedAt
+    const foundCandidate = await candidateTable.getById(this.id)
+    this.name = foundCandidate.name
+    this.votes = foundCandidate.votes
   }
 
   async delete() {
     return candidateTable.delete(this.id);
+  }
+
+  async update(dados) {
+    await candidateTable.getById(this.id)
+    await candidateTable.update(this.id, dados)
   }
 
 

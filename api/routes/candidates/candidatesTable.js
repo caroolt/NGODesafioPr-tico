@@ -25,6 +25,15 @@ module.exports = {
     return found
   },
 
+  async update(id, votes) {
+    return Model.update(
+      votes,
+      {
+        where: { id: id }
+      }
+    )
+  },
+
   delete(id) {
     return Model.destroy({
       where: {

@@ -3,7 +3,7 @@ const candidatesTable = require('./candidatesTable');
 const Candidate = require('./Candidate');
 const CandidateSerializer = require('../../Serializer').CandidateSerializer;
 
-router.get('/', async (request, response) => {
+router.get('/total', async (request, response) => {
   const results = await candidatesTable.list()
   response.status(200)
 
@@ -16,7 +16,7 @@ router.get('/', async (request, response) => {
   )
 });
 
-router.post('/', async (request, response, middlewareErros) => {
+router.post('/candidate', async (request, response, middlewareErros) => {
   try {
     const receivedData = request.body;
     const candidate = new Candidate(receivedData);
@@ -37,7 +37,7 @@ router.post('/', async (request, response, middlewareErros) => {
   }
 });
 
-router.get('/:idCandidate', async (request, response, middlewareErros) => {
+router.get('/total/:idCandidate', async (request, response, middlewareErros) => {
   try {
     const id = request.params.idCandidate
     const candidate = new Candidate({ id: id });
@@ -47,7 +47,7 @@ router.get('/:idCandidate', async (request, response, middlewareErros) => {
 
     const serializer = new CandidateSerializer(
       response.getHeader('Content-Type'),
-      ['name', 'createdAt', 'updatedAt']
+      ['name', 'votes']
     )
 
     response.send(
@@ -59,33 +59,32 @@ router.get('/:idCandidate', async (request, response, middlewareErros) => {
   }
 });
 
-router.put('/:idCandidate', async (request, response, middlewareErros) => {
+router.post('/total/:idCandidate', async (request, response, middlewareErros) => {
   try {
     const id = request.params.idCandidate
-    const dadosRecebidos = request.body
 
-    const dados = Object.assign({}, dadosRecebidos, { id: id })
-    const candidate = new Candidate(dados);
+    let candidate = await candidatesTable.getById(id);
+    const totalDeVotos = candidate.votes + 1;
+    const votos = {
+      "votes": totalDeVotos
+    };
 
-    await candidate.update()
+    const dados = Object.assign({}, { id: id }, votos)
+    const newCandidate = new Candidate(dados);
+
+    await newCandidate.update(dados)
+
+    const message = 'Candidate has received a new vote';
+    const Response = { ...dados, message }
 
     response.status(200)
-    const message = {
-      'message': 'User was updated successfully'
-    }
-
-    const serializer = new CandidateSerializer(
-      response.getHeader('Content-Type')
-    );
-
-    response.send(serializer.serialize(message));
-
+      .send(Response);
   } catch (erro) {
     middlewareErros(erro);
   }
 });
 
-router.delete('/:idCandidate', async (request, response, middlewareErros) => {
+router.delete('/candidate/:idCandidate', async (request, response, middlewareErros) => {
   try {
     const id = request.params.idCandidate
     const candidate = new Candidate({ id: id });
@@ -94,7 +93,7 @@ router.delete('/:idCandidate', async (request, response, middlewareErros) => {
 
     response.status(200);
     const message = {
-      'message': 'User was deleted successfully'
+      'message': 'Candidate was deleted successfully'
     }
 
     const serializer = new CandidateSerializer(
