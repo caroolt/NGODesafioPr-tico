@@ -7,19 +7,46 @@
 ![Banner de pessoas votando](https://user-images.githubusercontent.com/82682093/156283363-a3c602e7-b249-4b8e-ad9f-bf3928ec5378.png)
 
 # 🎉 Descrição do projeto
-O objetivo deste projeto é desenvolver uma API para a votações utilizando Node.js e algumas dependências.
-## 🛠️ Abrir e rodar o projeto
-
-Após clonar o projeto, basta instalar as dependências e rodar o comando: 
-`yarn start`
+O objetivo deste projeto é desenvolver uma API para votações utilizando Node.js e algumas dependências.
 
 ### ✔️ Técnicas e tecnologias utilizadas
 - Node.js v14.17.0
 - Express
 - mySQL
-- Sequelizer
+- Sequelize
 
+## 🛠️ Abrir e rodar o projeto
+#### 1- Clonar o Projeto
+#### 2- Editar o arquivo default.json dentro da pasta config
+ - Nesta etapa é necessário que sua máquina tenha e esteja executando o [mySQL](https://dev.mysql.com/downloads/)
+ - O usuário e a senha devem ser os usados no mySQL
+ 
+  ![C](https://user-images.githubusercontent.com/82682093/156618162-2c8e5237-d657-4c5a-a0e5-46461bb20a62.png)
 
+#### 3- Instalar todas as dependências
+   `yarn install`
+   
+#### 4- Criar o banco de dados
+  - No CMD digite o seguinte comando
+  
+  `mysql -u root -p -P 3307`
+ 
+  - Para criar o banco de dados você precisa digitar o comando no CMD
+  
+  mysql>`CREATE DATABASE nome_definido_no_arquivo_de_config;`
+  
+  - Depois basta passar a utilizar o banco de dados
+  
+  mysql> `use nome_definido_no_arquivo_de_config`
+
+#### 5- Criar as tabelas
+  - Apos ter conectado no banco de dados basta criar a tabela utilizada
+  
+  `node api/database/createTables.js`
+
+#### 6- Rodar o projeto 
+   `yarn start`
+ 
 ### :hammer: Funcionalidades do projeto
 
 - `Cadastro de Candidatos`: Registro básico de candidatos (sem preocupar com autenticação e cadastros mais complexos com JWT)
