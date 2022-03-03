@@ -1,0 +1,12 @@
+{
+  "mysql":{
+      "database":"surveyngo",
+      "user": "nome do usuário",
+      "password": "senha",
+      "host": "127.0.0.1",
+      "port": "Porta em que o mysql esta rodando"
+  },
+  "api":{
+      "port": "Porta que você quer que a API rode"
+  }
+} 
