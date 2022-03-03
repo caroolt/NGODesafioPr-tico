@@ -21,7 +21,7 @@ O objetivo deste projeto é desenvolver uma API para votações utilizando Node.
  - Nesta etapa é necessário que sua máquina tenha e esteja executando o [mySQL](https://dev.mysql.com/downloads/)
  - O usuário e a senha devem ser os usados no mySQL
  
-  ![C](https://user-images.githubusercontent.com/82682093/156618162-2c8e5237-d657-4c5a-a0e5-46461bb20a62.png)
+  ![config](https://user-images.githubusercontent.com/82682093/156618162-2c8e5237-d657-4c5a-a0e5-46461bb20a62.png)
 
 #### 3- Instalar todas as dependências
    `yarn install`
@@ -47,6 +47,10 @@ O objetivo deste projeto é desenvolver uma API para votações utilizando Node.
 #### 6- Rodar o projeto 
    `yarn start`
  
+#### 7- Passo não obrigátorio
+   - Na pasta insomnia há disponível o json com os métodos a serem testados. Para usá-los no insomnia basta importar o json e pronto.
+   
+   _Insomnia é uma ferramenta cliente de API REST, como o Postman, mas tem alguns recursos adicionais, como suporte a GraphQL, gRPC, entre outros._
 ### :hammer: Funcionalidades do projeto
 
 - `Cadastro de Candidatos`: Registro básico de candidatos (sem preocupar com autenticação e cadastros mais complexos com JWT)
