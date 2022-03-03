@@ -62,6 +62,6 @@ app.use((erro, request, response, middlewareErros) => {
 })
 
 app.listen(config.get('api.port'), () => {
-    console.log('API is on!');
+    console.log(`Servidor rodando na porta ${config.get('api.port')}`);
 })
 
