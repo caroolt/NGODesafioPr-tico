@@ -55,10 +55,11 @@ O objetivo deste projeto é desenvolver uma API para votações utilizando Node.
 
 - `Cadastro de Candidatos`: Registro básico de candidatos (sem preocupar com autenticação e cadastros mais complexos com JWT)
 - `Pegar todos os candidatos`: Deverá ser possível pegar todos os candidatos
-- `Registro de votos`: Registro de votos (Com base no id)
+- `Registro de votos`: Registro de votos (Com base no ID)
   - Se for bem sucedido, deve "devolver" o ID do candidato junto com o número total de votos que o candidato recebeu (código 200)
   - Se votar em um ID de candidato que não existe, retornará o código 404 com uma mensagem de erro
-- `Get All votes de um candidato`:  Deverá ter a possibilidade de "pegar" todos os votos de X candidato com base no id
+- `Get All votes de um candidato`:  Deverá ter a possibilidade de "pegar" todos os votos de X candidato com base no ID
+- `Deletar um candidato`: Deve ser possível deletar um candidato com base em seu ID
 
 ## Pessoa Desenvolvedora do Projeto
 
