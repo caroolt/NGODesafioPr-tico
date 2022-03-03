@@ -1,6 +1,6 @@
 {
     "mysql":{
-        "database":"nome da tabela",
+        "database":"surveyngo",
         "user": "nome do usuário",
         "password": "senha",
         "host": "127.0.0.1 - localhost",
