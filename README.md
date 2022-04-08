@@ -1,21 +1,34 @@
 
 
-<h1 align="center"> Voting API</h1>
+<h1 align="center">Voting API</h1>
 
-![issues](https://img.shields.io/github/issues/caroolt/desafiopraticoNGO?color=red) ![license](https://img.shields.io/github/license/caroolt/desafiopraticoNGO)
+![issues](https://img.shields.io/github/issues/caroolt/votingAPI?color=red) ![license](https://img.shields.io/github/license/caroolt/votingAPI)
 
 ![Banner de pessoas votando](https://user-images.githubusercontent.com/82682093/156283363-a3c602e7-b249-4b8e-ad9f-bf3928ec5378.png)
 
+## Sumário
+  1. [Descrição do projeto](#description)
+  2. [Técnicas e tecnologias](#technologies)
+  3. [Abrir e rodar o projeto](#run_project)
+  4. [Funcionalidades do projeto](#project_features)
+  4. [Pessoas que ajudaram a desenvolver o projecto](#developers)
+  5. [English Readme](./READMEEnglish.md)
+
 # 🎉 Descrição do projeto
+###### description
 O objetivo deste projeto é desenvolver uma API para votações utilizando Node.js e algumas dependências.
 
-### ✔️ Técnicas e tecnologias utilizadas
+### ✔️ Técnicas e tecnologias
+###### technologies
+
 - Node.js v14.17.0
 - Express
 - mySQL
 - Sequelize
 
 ## 🛠️ Abrir e rodar o projeto
+###### run_project
+
 #### 1- Clonar o Projeto
 #### 2- Editar o arquivo default.json dentro da pasta config
  - Nesta etapa é necessário que sua máquina tenha e esteja executando o [mySQL](https://dev.mysql.com/downloads/)
@@ -52,6 +65,7 @@ O objetivo deste projeto é desenvolver uma API para votações utilizando Node.
    
    _Insomnia é uma ferramenta cliente de API REST, como o Postman, mas tem alguns recursos adicionais, como suporte a GraphQL, gRPC, entre outros._
 ### :hammer: Funcionalidades do projeto
+###### project_features
 
 - `Cadastro de Candidatos`: Registro básico de candidatos (sem preocupar com autenticação e cadastros mais complexos com JWT);
 - `Pegar todos os candidatos`: Deverá ser possível listar todos os candidatos;
@@ -61,7 +75,7 @@ O objetivo deste projeto é desenvolver uma API para votações utilizando Node.
 - `Get All votes de um candidato`:  Deve ser possível "pegar" todos os votos de X candidato com base no ID;
 - `Deletar um candidato`: Deve ser possível deletar um candidato com base em seu ID
 
-## Pessoa Desenvolvedora do Projeto
-
+## Desenvolvedora do Projeto
+###### developers
 | [<img src="https://avatars.githubusercontent.com/u/82682093?s=400&u=0a46c06b6a1ae04f7acf2f2162187b1a7e4d5d53&v=4" width=115><br><sub>Carolina Teixeira Coelho</sub>](https://github.com/caroolt) | 
 | :---: |
