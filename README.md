@@ -1,6 +1,6 @@
 
 
-<h1 align="center"> Desafio Prático NGO </h1>
+<h1 align="center"> Voting API</h1>
 
 ![issues](https://img.shields.io/github/issues/caroolt/desafiopraticoNGO?color=red) ![license](https://img.shields.io/github/license/caroolt/desafiopraticoNGO)
 
